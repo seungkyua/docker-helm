@@ -10,8 +10,7 @@ RUN apk add --update curl && \
   mv linux-amd64/helm /usr/local/bin/helm && \
   apk del curl && \
   rm -rf /var/cache/apk/* && \
-  rm -rf /helm-${HELM_VERSION}-linux-amd64.tar.gz && \
-  rm -rf /linux-amd64
+  rm -rf /helm-${HELM_VERSION}-linux-amd64.tar.gz
 
 ENTRYPOINT ["helm"]
 CMD ["help"]
